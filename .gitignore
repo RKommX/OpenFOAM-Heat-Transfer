@@ -1,0 +1,41 @@
+# ----------------------------------------
+# OpenFOAM time directories
+# ----------------------------------------
+# Ignore directories like 0.1, 0.2, 1, 2, ..., 30
+[0-9]*/
+
+# But keep the initial condition directories
+!0/
+!0.orig/
+
+
+# ----------------------------------------
+# Parallel run directories
+# ----------------------------------------
+processor*/
+
+
+# ----------------------------------------
+# Runtime-generated output
+# ----------------------------------------
+**/postProcessing/
+**/dynamicCode/
+
+
+# ----------------------------------------
+# Generated mesh
+# ----------------------------------------
+**/constant/polyMesh/
+**/constant/extendedFeatureEdgeMesh/
+
+
+# ----------------------------------------
+# Logs and temporary files
+# ----------------------------------------
+log
+log.*
+*.log
+*.err
+*.out
+*.tmp
+.DS_Store
