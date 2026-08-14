@@ -1,4 +1,4 @@
-#### Steps to run the case 
+### Steps to run the case 
 
 1. Open the run directory as per your console using the command: cd $FOAM_RUN
 2. Then direct to the case file using the command: cd <casefilename>
