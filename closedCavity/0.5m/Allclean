@@ -1,0 +1,26 @@
+#!/bin/sh
+cd "${0%/*}" || exit 1
+
+# Remove OpenFOAM time directories greater than 0,
+for d in [0-9]*; do
+    [ -d "$d" ] || continue
+
+    case "$d" in
+        0|0.orig)
+            ;;
+        *)
+            rm -rf "$d"
+            ;;
+    esac
+done
+
+
+rm -rf processor*
+rm -rf postProcessing
+rm -rf dynamicCode
+
+rm -f log
+rm -f log.*
+rm -f *.log
+
+rm -rf constant/polyMesh
